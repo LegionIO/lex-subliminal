@@ -13,7 +13,8 @@ module Legion
                       :influence_target, :created_at, :influence_count
           attr_accessor :activation
 
-          def initialize(content:, trace_type: :associative, domain: :general, activation: DEFAULT_ACTIVATION, influence_target: :attention)
+          def initialize(content:, trace_type: :associative, domain: :general, activation: DEFAULT_ACTIVATION,
+                         influence_target: :attention)
             @id = SecureRandom.uuid
             @content = content.to_s
             @trace_type = valid_trace_type(trace_type)

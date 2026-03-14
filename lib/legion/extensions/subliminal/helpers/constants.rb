@@ -36,19 +36,19 @@ module Legion
           ].freeze
 
           ACTIVATION_LABELS = {
-            (0.3...0.4) => :near_threshold,
-            (0.2...0.3) => :moderate,
-            (0.1...0.2) => :faint,
+            (0.3...0.4)  => :near_threshold,
+            (0.2...0.3)  => :moderate,
+            (0.1...0.2)  => :faint,
             (0.02...0.1) => :trace,
-            (..0.02)    => :extinct
+            (..0.02)     => :extinct
           }.freeze
 
           INFLUENCE_LABELS = {
-            (0.2..)     => :strong,
-            (0.1...0.2) => :moderate,
-            (0.05...0.1) => :subtle,
+            (0.2..)       => :strong,
+            (0.1...0.2)   => :moderate,
+            (0.05...0.1)  => :subtle,
             (0.01...0.05) => :minimal,
-            (..0.01)    => :none
+            (..0.01)      => :none
           }.freeze
 
           SATURATION_LABELS = {

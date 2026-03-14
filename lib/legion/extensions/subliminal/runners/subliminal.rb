@@ -7,7 +7,8 @@ module Legion
         module Subliminal
           include Legion::Extensions::Helpers::Lex if defined?(Legion::Extensions::Helpers::Lex)
 
-          def create_subliminal_trace(content:, trace_type: :associative, domain: :general, activation: nil, influence_target: :attention, engine: nil, **)
+          def create_subliminal_trace(content:, trace_type: :associative, domain: :general, activation: nil,
+                                      influence_target: :attention, engine: nil, **)
             eng = engine || @default_engine
             trace = eng.create_trace(content: content, trace_type: trace_type, domain: domain,
                                      activation: activation || Helpers::Constants::DEFAULT_ACTIVATION,

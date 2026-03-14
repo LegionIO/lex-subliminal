@@ -12,7 +12,8 @@ module Legion
             @influences = []
           end
 
-          def create_trace(content:, trace_type: :associative, domain: :general, activation: DEFAULT_ACTIVATION, influence_target: :attention)
+          def create_trace(content:, trace_type: :associative, domain: :general, activation: DEFAULT_ACTIVATION,
+                           influence_target: :attention)
             prune_extinct
             trace = SubliminalTrace.new(content: content, trace_type: trace_type, domain: domain,
                                         activation: activation, influence_target: influence_target)
@@ -101,15 +102,15 @@ module Legion
 
           def subliminal_report
             {
-              total_traces:        @traces.size,
-              active_count:        active_traces.size,
-              near_threshold:      near_threshold_traces.size,
-              potent_count:        potent_traces.size,
-              total_influences:    @influences.size,
-              subliminal_load:     overall_subliminal_load,
-              saturation_label:    saturation_label,
-              breached_count:      breached_traces.size,
-              strongest:           strongest_traces(limit: 3).map(&:to_h)
+              total_traces:     @traces.size,
+              active_count:     active_traces.size,
+              near_threshold:   near_threshold_traces.size,
+              potent_count:     potent_traces.size,
+              total_influences: @influences.size,
+              subliminal_load:  overall_subliminal_load,
+              saturation_label: saturation_label,
+              breached_count:   breached_traces.size,
+              strongest:        strongest_traces(limit: 3).map(&:to_h)
             }
           end
 

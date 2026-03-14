@@ -25,11 +25,11 @@ module Legion
 
           def to_h
             {
-              id:        @id,
-              trace_id:  @trace_id,
-              target:    @target,
-              magnitude: @magnitude,
-              domain:    @domain,
+              id:         @id,
+              trace_id:   @trace_id,
+              target:     @target,
+              magnitude:  @magnitude,
+              domain:     @domain,
               created_at: @created_at.iso8601
             }
           end
